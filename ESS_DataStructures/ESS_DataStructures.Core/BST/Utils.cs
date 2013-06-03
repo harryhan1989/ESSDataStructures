@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ESS_DataStructures.Core.BST
 {
@@ -18,16 +19,16 @@ namespace ESS_DataStructures.Core.BST
             return tree;
         }
 
-        #region Caml Operation
+        #region Caml auto generator for SharePoint
         /// <summary>
         /// Draw Caml Tree for filter control
         /// </summary>
         /// <param name="structureData">format as 0-And:1;0-And:2;0-And:3;0-And:4;1-Or:5;1-Or:6;2-And:7, has Parent-child relationship</param>
-        /// <param name="realData">caml list</param>
+        /// <param name="realData">caml list for example: key:firstCondition value:<Eq><FieldRef Name='Editor' /><Value Type='User'>lhan</Value></Eq></param>
         public static string DrawCamlTree(string structureData, Dictionary<string, string> realData)
         {
             var dataBlock = FormatStringToDic(structureData);
-            BinarySearchTree<string> tree = new BinarySearchTree<string>();
+            var tree = new BinarySearchTree<string>();
             foreach (var str in dataBlock.Keys)
             {
                 DoDraw(ref tree, str, dataBlock[str]);
@@ -41,8 +42,8 @@ namespace ESS_DataStructures.Core.BST
         {
             string parentNodeValue = parent.Replace("-Or", "").Replace("-And", "");
             string parentNodeOperate = parent.Replace(parentNodeValue + "-", "");
-            BinaryTreeNode<string> parentNode = new BinaryTreeNode<string>("-1");
-            List<string> endData = new List<string>();
+            var parentNode = new BinaryTreeNode<string>("-1");
+            var endData = new List<string>();
             if (parentNodeValue != "0")
             {
 
@@ -78,18 +79,24 @@ namespace ESS_DataStructures.Core.BST
             }
         }
 
-        private static string FillCamlTreeWithRealData(string realStructure,Dictionary<string,string> realData)
+        private static string FillCamlTreeWithRealData(string realStructure, Dictionary<string, string> realData)
         {
-
-            foreach (var realDataItem in realData)
-            {
-                realStructure = realStructure
-                             .Replace("<And>(" + realDataItem.Key + ")", "<And>" + realDataItem.Value)
-                             .Replace("<Or>(" + realDataItem.Key + ")", "<Or>" + realDataItem.Value)
-                             .Replace("(" + realDataItem.Key + ")</And>", realDataItem.Value + "</And>")
-                             .Replace("(" + realDataItem.Key + ")</Or>", realDataItem.Value + "</Or>");
-            }
-            return realStructure;
+            return realData.Aggregate(realStructure, (current, realDataItem) => current
+                                                                                    .Replace(
+                                                                                        "<And>(" + realDataItem.Key +
+                                                                                        ")",
+                                                                                        "<And>" + realDataItem.Value)
+                                                                                    .Replace(
+                                                                                        "<Or>(" + realDataItem.Key + ")",
+                                                                                        "<Or>" + realDataItem.Value)
+                                                                                    .Replace(
+                                                                                        "(" + realDataItem.Key +
+                                                                                        ")</And>",
+                                                                                        realDataItem.Value + "</And>")
+                                                                                    .Replace(
+                                                                                        "(" + realDataItem.Key +
+                                                                                        ")</Or>",
+                                                                                        realDataItem.Value + "</Or>"));
         }
 
         private static Dictionary<string, List<string>> FormatStringToDic(string data)
