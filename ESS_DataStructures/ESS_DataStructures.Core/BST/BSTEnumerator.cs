@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 
-namespace DsLib
+namespace ESS_DataStructures.Core.BST
 {
     public class BSTEnumerator<T> : IEnumerator<T>  where T : IComparable<T>
     {

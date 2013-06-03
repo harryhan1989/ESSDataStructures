@@ -1,5 +1,5 @@
 ﻿
-namespace DsLib
+namespace ESS_DataStructures.Core.BST
 {
     public enum TreeTraversalType
     {

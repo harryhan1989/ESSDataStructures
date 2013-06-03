@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System;
 
-namespace DsLib
+namespace ESS_DataStructures.Core.BST
 {
     public class GenericCompare2<T> : IEqualityComparer, IEqualityComparer<T>
     {

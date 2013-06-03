@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 
-namespace DsLib
+namespace ESS_DataStructures.Core.BST
 {
     public class BinarySearchTree<T> : ICollection<T> where T : IComparable<T>
     {

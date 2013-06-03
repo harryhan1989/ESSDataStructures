@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace DsLib
+namespace ESS_DataStructures.Core.BST
 {
     #region BSTUtils
     public static class BSTUtils

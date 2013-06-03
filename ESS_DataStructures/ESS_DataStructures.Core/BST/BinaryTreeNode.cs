@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections;
 
-namespace DsLib
+namespace ESS_DataStructures.Core.BST
 {
     public class BinaryTreeNode<T> where T : IComparable<T>
     {
