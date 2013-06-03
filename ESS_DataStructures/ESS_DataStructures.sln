@@ -1,22 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESS_DataStructures", "ESS_DataStructures\ESS_DataStructures.csproj", "{2F17C7A0-F619-40E0-9B8A-BA333F4FB841}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESS_DataStructures.Web", "ESS_DataStructures\ESS_DataStructures.Web.csproj", "{2F17C7A0-F619-40E0-9B8A-BA333F4FB841}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESS_DataStructures.Tests", "ESS_DataStructures.Tests\ESS_DataStructures.Tests.csproj", "{4BA999B9-3CE6-4B0E-A788-D2940D12FD8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESS_DataStructures.Core", "ESS_DataStructures.Core\ESS_DataStructures.Core.csproj", "{C2564D9D-181B-47CA-8841-ABE431E80BB9}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
+		SccNumberOfProjects = 4
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs13
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = ESS_DataStructures.Tests\\ESS_DataStructures.Tests.csproj
 		SccProjectName1 = ESS_DataStructures.Tests
 		SccLocalPath1 = ESS_DataStructures.Tests
-		SccProjectUniqueName2 = ESS_DataStructures\\ESS_DataStructures.csproj
+		SccProjectUniqueName2 = ESS_DataStructures\\ESS_DataStructures.Web.csproj
 		SccProjectName2 = ESS_DataStructures
 		SccLocalPath2 = ESS_DataStructures
+		SccProjectUniqueName3 = ESS_DataStructures.Core\\ESS_DataStructures.Core.csproj
+		SccProjectName3 = ESS_DataStructures.Core
+		SccLocalPath3 = ESS_DataStructures.Core
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +36,10 @@ Global
 		{4BA999B9-3CE6-4B0E-A788-D2940D12FD8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BA999B9-3CE6-4B0E-A788-D2940D12FD8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BA999B9-3CE6-4B0E-A788-D2940D12FD8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2564D9D-181B-47CA-8841-ABE431E80BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2564D9D-181B-47CA-8841-ABE431E80BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2564D9D-181B-47CA-8841-ABE431E80BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2564D9D-181B-47CA-8841-ABE431E80BB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

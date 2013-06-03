@@ -127,9 +127,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ESS_DataStructures\ESS_DataStructures.csproj">
+    <ProjectReference Include="..\ESS_DataStructures\ESS_DataStructures.Web.csproj">
       <Project>{2F17C7A0-F619-40E0-9B8A-BA333F4FB841}</Project>
-      <Name>ESS_DataStructures</Name>
+      <Name>ESS_DataStructures.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
