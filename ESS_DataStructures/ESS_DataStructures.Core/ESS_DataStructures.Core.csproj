@@ -43,13 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BST\BinarySearchTree.cs" />
-    <Compile Include="BST\BinaryTreeNode.cs" />
-    <Compile Include="BST\BSTEnumerator.cs" />
-    <Compile Include="BST\GenericCompare.cs" />
-    <Compile Include="BST\TreeTraversalType.cs" />
-    <Compile Include="BST\Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BST\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
