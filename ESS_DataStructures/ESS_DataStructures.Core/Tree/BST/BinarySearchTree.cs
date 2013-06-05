@@ -16,9 +16,9 @@ namespace ESS_DataStructures.Core.Tree.BST
 
         public BinarySearchNode<T> Root { get; set; }
 
-        //public BinarySearchNode<T>  
+        public BinarySearchNode<T> StartNode { get; set; }
 
-
+        public int Height { get; protected set; }
 
         #endregion
 
