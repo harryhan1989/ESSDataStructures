@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CustomCompares\DateTimeCompare.cs" />
+    <Compile Include="Common\GenericCompare.cs" />
+    <Compile Include="Events\BinaryTreeEventArgs.cs" />
     <Compile Include="Events\IDataStructureEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tree\BST\BinarySearchNode.cs" />
+    <Compile Include="Tree\BST\BinaryTreeNode.cs" />
     <Compile Include="Tree\BST\BinarySearchTree.cs" />
   </ItemGroup>
   <ItemGroup />

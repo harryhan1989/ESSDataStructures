@@ -8,19 +8,19 @@ namespace ESS_DataStructures.Core.Events
 {
     public interface IDataStructureEvents
     {
-        event EventHandler OnItemAdding;
-        void ItemAdding();
-        event EventHandler OnItemAdded;
-        void ItemAdded();
+        event EventHandler ItemAdding;
+        void OnItemAdding(EventArgs e);
+        event EventHandler ItemAdded;
+        void OnItemAdded(EventArgs e);
 
-        event EventHandler OnItemUpdating;
-        void ItemUpdating();
-        event EventHandler OnItemUpdated;
-        void ItemUpdated();
+        event EventHandler ItemUpdating;
+        void OnItemUpdating(EventArgs e);
+        event EventHandler ItemUpdated;
+        void OnItemUpdated(EventArgs e);
 
-        event EventHandler OnItemDeleting;
-        void ItemDeleting();
-        event EventHandler OnItemDeleted;
-        void ItemDeleted();
+        event EventHandler ItemDeleting;
+        void OnItemDeleting(EventArgs e);
+        event EventHandler ItemDeleted;
+        void OnItemDeleted(EventArgs e);
     }
 }

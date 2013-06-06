@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ESS_DataStructures.Core.Tree.BST
 {
-    public class BinarySearchNode<T>
+    public class BinaryTreeNode<T>
     {
-        public BinarySearchNode(T t)
+        public BinaryTreeNode(T t)
         {
             Value = t;
         }
         public T Value { get; set; }
-        public BinarySearchNode<T> ParentNode { get; set; }
-        public BinarySearchNode<T> LefeNode { get; set; }
-        public BinarySearchNode<T> RightNode { get; set; }
+        public BinaryTreeNode<T> ParentNode { get; set; }
+        public BinaryTreeNode<T> LefeNode { get; set; }
+        public BinaryTreeNode<T> RightNode { get; set; }
         public int Hight { get; protected internal set; }
     }
 }
